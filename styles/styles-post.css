@@ -106,9 +106,12 @@ ul{
 .inside-container{
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 .inside-img{
   width: 100%;
+  max-width: 800px;
 }
 
 /* share icons */
@@ -150,4 +153,29 @@ ul{
 .related-content div a:hover{
   color: #fff;
   background-color: #00701a;
+}
+
+/* post media query */
+@media (min-width: 960px ){
+  .post{
+    display:flex;
+    flex-flow: column;
+  }
+  .full-width{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .text-content, .share-icons, .separation, .related-content{
+    max-width: 1068px;
+    align-self: center;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+  .entry-header, .entry-content{
+    align-self: flex-start;
+  }
+  .separation, .related-content, .share-icons{
+    width: calc(100% - 4em);
+  }
 }
